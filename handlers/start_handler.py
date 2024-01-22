@@ -10,7 +10,6 @@ start_router = Router()
 @start_router.message(CommandStart)
 async def command_start(message: types.Message):
     logging.info(message.from_user)
-    await message.answer(f'Hi {hbold(message.from_user.first_name)}! This is my first bot.', reply_markup=keyboard)
-
-
+    await message.answer(f'Hi {hbold(message.from_user.first_name)}! This is my first bot. Please enter '
+                         f'name of Ukrainian city or choose one from the menu.', reply_markup=keyboard)
 
